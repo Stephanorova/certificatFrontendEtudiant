@@ -12,7 +12,7 @@ function App() {
   const handleVerification = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.get(`http://localhost:3000/api/verify/${certificateNumber}`);
+      const response = await axios.get(`https://certificatbackend.onrender.com/api/verify/${certificateNumber}`);
       setVerificationResult(response.data);
       setError('');
     } catch (err) {
@@ -23,7 +23,7 @@ function App() {
 
   const handleDownload = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/pdf/${certificateNumber}`, {
+      const response = await axios.get(`https://certificatbackend.onrender.com//api/pdf/${certificateNumber}`, {
         responseType: 'blob'
       });
       const url = window.URL.createObjectURL(new Blob([response.data]));
