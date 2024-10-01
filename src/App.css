@@ -27,6 +27,19 @@
 .App-link {
   color: #61dafb;
 }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body{
+  font-family: "Roboto", sans-serif;
+  background-color:  #2e2e2e;
+  
+  
+}
 
 @keyframes App-logo-spin {
   from {
