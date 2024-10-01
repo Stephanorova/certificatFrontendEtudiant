@@ -23,7 +23,7 @@ function App() {
 
   const handleDownload = async () => {
     try {
-      const response = await axios.get(`https://certificatbackend.onrender.com//api/pdf/${certificateNumber}`, {
+      const response = await axios.get(`https://certificatbackend.onrender.com/api/pdf/${certificateNumber}`, {
         responseType: 'blob'
       });
       const url = window.URL.createObjectURL(new Blob([response.data]));
